@@ -14,7 +14,7 @@ jobs:
         with:
           command: ./custom_scripts/discord-bot.stop
           host: ${{ secrets.SSH_HOST }}
-          username: garygrossgarten
+          username: ${{ secrets.SSH_USERNAME }}
           port: ${{ secrets.SSH_PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           privateKey: ${{ secrets.SSH_KEY}}
@@ -33,7 +33,7 @@ jobs:
         with:
           command: ./custom_scripts/discord-bot.run
           host: ${{ secrets.SSH_HOST }}
-          username: garygrossgarten
+          username: ${{ secrets.SSH_USERNAME }}
           port: ${{ secrets.SSH_PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           privateKey: ${{ secrets.SSH_KEY}}
