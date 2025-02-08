@@ -15,6 +15,7 @@ jobs:
           command: ./custom_scripts/discord-bot.stop
           host: ${{ secrets.SSH_HOST }}
           username: garygrossgarten
+          port: ${{ secrets.SSH_PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           privateKey: ${{ secrets.SSH_KEY}}
       - name: SCP Files
@@ -33,5 +34,6 @@ jobs:
           command: ./custom_scripts/discord-bot.run
           host: ${{ secrets.SSH_HOST }}
           username: garygrossgarten
+          port: ${{ secrets.SSH_PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           privateKey: ${{ secrets.SSH_KEY}}
