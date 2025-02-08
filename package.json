@@ -1,0 +1,35 @@
+{
+  "name": "shadowbot2.0",
+  "version": "0.0.3",
+  "description": "The upgraded version of the ShadowBot",
+  "main": "dist/index.js",
+  "scripts": {
+    "getDependencies": "yarn install",
+    "testJs": "node test/test.js",
+    "testTs": "ts-node test/test.ts",
+    "build": "yarn getDependencies && yarn check && tsc -p .",
+    "tsStart": "yarn getDependencies && ts-node src/index.ts",
+    "jsStart": "yarn getDependencies && node dist/index.js",
+    "checkCode": "tsc --noEmit --skipLibCheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C0dex73/ShadowBot2.0.git"
+  },
+  "author": "Shaden and CODEX",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/C0dex73/ShadowBot2.0/issues"
+  },
+  "homepage": "https://github.com/C0dex73/ShadowBot2.0#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@types/request": "^2.48.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
