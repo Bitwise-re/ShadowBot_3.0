@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: stop discord bot
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ./custom_scripts/discord-bot.stop
+          host: ${{ secrets.SSH_HOST }}
+          username: garygrossgarten
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          privateKey: ${{ secrets.SSH_KEY}}
       - name: SCP Files
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -19,3 +27,11 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "./*"
           target: "/var/shadowbot"
+      - name: start discord bot
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ./custom_scripts/discord-bot.run
+          host: ${{ secrets.SSH_HOST }}
+          username: garygrossgarten
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          privateKey: ${{ secrets.SSH_KEY}}
