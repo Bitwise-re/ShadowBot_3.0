@@ -1,7 +1,11 @@
 name: build ts into js
 on:
   push:
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
