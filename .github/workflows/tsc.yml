@@ -22,7 +22,7 @@ jobs:
     - name: ts compile
       run: yarn build
     - name: git workflow copy
-      run: cp .github/
+      run: cp -r .github/ dist/
     - name: Push
       uses: s0/git-publish-subdir-action@develop
       env:
