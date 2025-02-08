@@ -17,4 +17,4 @@ jobs:
     - name: tsc
       uses: icrawl/action-tsc@v1
       with:
-        project: src/index.ts
+        project: src/
