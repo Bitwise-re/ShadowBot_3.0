@@ -18,6 +18,8 @@ jobs:
       run: yarn install
     - name: tsc
       run: yarn build
+    - name: test_ls
+      run: ls dist
     - name: Push
       uses: s0/git-publish-subdir-action@develop
       env:
