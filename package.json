@@ -1,6 +1,6 @@
 {
-  "name": "shadowbot2.0",
-  "version": "0.0.3",
+  "name": "shadowbot",
+  "version": "3.0.0",
   "description": "The upgraded version of the ShadowBot",
   "main": "dist/index.js",
   "scripts": {
@@ -16,15 +16,14 @@
     "type": "git",
     "url": "git+https://github.com/C0dex73/ShadowBot2.0.git"
   },
-  "author": "Shaden and CODEX",
-  "license": "CC-BY-NC-SA-4.0",
+  "author": "CODEX",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/C0dex73/ShadowBot2.0/issues"
   },
   "homepage": "https://github.com/C0dex73/ShadowBot2.0#readme",
   "dependencies": {
-    "discord.js": "^14.14.1",
-    "request": "^2.88.2"
+    "discord.js": "^14.14.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.20",
