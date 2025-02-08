@@ -4,6 +4,8 @@ on:
 
 jobs:
   tsc:
+    permissions:
+      contents: write
     name: tsc
     runs-on: ubuntu-latest
     steps:
