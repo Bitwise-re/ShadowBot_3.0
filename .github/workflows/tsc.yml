@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+      with:
+        token: ${{ secrets.PAT }}
     - name: install node v18
       uses: actions/setup-node@v1
       with:
@@ -25,5 +27,5 @@ jobs:
         REPO: self
         BRANCH: deploy
         FOLDER: dist
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
         MESSAGE: "Build: ({sha}) {msg}"
