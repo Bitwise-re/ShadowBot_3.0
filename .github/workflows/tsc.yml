@@ -4,10 +4,10 @@ on:
   pull_request:
 
 jobs:
-  tsc:
+  deploy:
     permissions:
       contents: write
-    name: tsc
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -19,8 +19,10 @@ jobs:
         node-version: 18
     - name: yarn install
       run: yarn install
-    - name: tsc
+    - name: ts compile
       run: yarn build
+    - name: git workflow copy
+      run: cp .github/
     - name: Push
       uses: s0/git-publish-subdir-action@develop
       env:
