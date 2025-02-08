@@ -10,7 +10,8 @@
     "build": "yarn getDependencies && yarn check && tsc -p .",
     "tsStart": "yarn getDependencies && ts-node src/index.ts",
     "jsStart": "yarn getDependencies && node dist/index.js",
-    "checkCode": "tsc --noEmit --skipLibCheck"
+    "checkCode": "tsc --noEmit --skipLibCheck",
+    "runDeployed": "yarn getDependencies && node index.js"
   },
   "repository": {
     "type": "git",
